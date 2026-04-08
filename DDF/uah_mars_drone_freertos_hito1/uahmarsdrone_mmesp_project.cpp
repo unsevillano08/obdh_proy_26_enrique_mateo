@@ -9,6 +9,7 @@
 // include deployment edroom components
  
 #include <public/uahmarsdrone_iface_v1.h>
+#include <public/ccdronemng_iface_v1.h>
  
 #ifdef CONFIG_EDROOMBP_DEPLOYMENT_NEED_TASK
  
@@ -30,8 +31,9 @@ int main (void){
  
  
 	UAHMarsDrone	comp1(1, 13, EDROOMprioNormal, 1024, systemDeployment.GetComp1Memory());
+	CCDroneMng	comp2(2, 13, EDROOMprioNormal, 1024, systemDeployment.GetComp2Memory());
  
-	systemDeployment.Config(&comp1);
+	systemDeployment.Config(&comp1, &comp2);
  
 	systemDeployment.Start();
  

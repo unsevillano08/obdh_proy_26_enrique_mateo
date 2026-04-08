@@ -8,12 +8,14 @@
 //*****************************************************************************
 //Main Wait
  
-void MainWait(UAHMarsDrone   &comp1){
+void MainWait(UAHMarsDrone   &comp1,
+					CCDroneMng   &comp2){
  
 	Pr_Time waitTime(3, 0);
  
 #ifdef _EDROOM_SYSTEM_CLOSE
-	while(!comp1.EDROOMIsComponentFinished())
+	while(!comp1.EDROOMIsComponentFinished()
+				||!comp2.EDROOMIsComponentFinished())
 #else
 	while(true)
 #endif
@@ -29,13 +31,17 @@ void CEDROOMSystemMemory::SetMemory(){
  
 	comp1Memory.SetMemory(10, comp1Messages, &comp1MessagesMarks[0]
 					,13,comp1QueueNodes, &comp1QueueNodesMarks[0]);
+	comp2Memory.SetMemory(10, comp2Messages, &comp2MessagesMarks[0]
+					,13,comp2QueueNodes, &comp2QueueNodesMarks[0]);
 }
  
 //*****************************************************************************
 //SetComponents
  
-void CEDROOMSystemCommSAP::SetComponents(UAHMarsDrone   *p_comp1){
+void CEDROOMSystemCommSAP::SetComponents(UAHMarsDrone   *p_comp1,
+										CCDroneMng   *p_comp2){
 	mp_comp1=p_comp1;
+	mp_comp2=p_comp2;
 }
  
  
@@ -55,6 +61,10 @@ void CEDROOMSystemCommSAP::RegisterInterfaces(){
  
 	// Register Interface for Component 1
 	m_localCommSAP.RegisterInterface(1, mp_comp1->Timer, mp_comp1);
+ 
+	// Register Interface for Component 2
+	m_localCommSAP.RegisterInterface(1, mp_comp2->Timer, mp_comp2);
+	m_localCommSAP.RegisterInterface(2, mp_comp2->DroneMngCtrl, mp_comp2);
  
 }
  
@@ -98,11 +108,14 @@ CEDROOMSystemDeployment::CEDROOMSystemDeployment(){
 //*****************************************************************************
 ////Config
  
-void CEDROOMSystemDeployment::Config(UAHMarsDrone   *p_comp1){
+void CEDROOMSystemDeployment::Config(UAHMarsDrone   *p_comp1,
+											CCDroneMng   *p_comp2){
  
 	mp_comp1=p_comp1;
+	mp_comp2=p_comp2;
  
-	systemCommSAP.SetComponents(	p_comp1);
+	systemCommSAP.SetComponents(	p_comp1,
+									p_comp2);
  
 	systemCommSAP.RegisterInterfaces();
 	systemCommSAP.SetConnections();
@@ -114,6 +127,7 @@ void CEDROOMSystemDeployment::Config(UAHMarsDrone   *p_comp1){
  
 void CEDROOMSystemDeployment::StartComponents(){
 	mp_comp1->EDROOMStart();
+	mp_comp2->EDROOMStart();
  
 }
  
@@ -134,7 +148,8 @@ StartComponents();
  
 	kernel.Start();
  
-	MainWait(*mp_comp1);
+	MainWait(*mp_comp1,
+				*mp_comp2);
  
  
 #endif
@@ -153,7 +168,8 @@ StartComponents();
 Pr_TaskRV_t CEDROOMSystemDeployment::main_task(Pr_TaskP_t){
  
 	systemDeployment.StartComponents();
-	MainWait(*systemDeployment.mp_comp1);
+	MainWait(*systemDeployment.mp_comp1,
+				*systemDeployment.mp_comp2);
  
 }
 #endif

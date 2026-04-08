@@ -13,6 +13,7 @@
 // include deployment edroom components
  
 #include <public/uahmarsdrone_iface_v1.h>
+#include <public/ccdronemng_iface_v1.h>
 // ***********************************************************************
 // class CEDROOMSystemMemory
 // ***********************************************************************
@@ -25,9 +26,16 @@ class CEDROOMSystemMemory{
 	CEDROOMQueue::CQueueNode	comp1QueueNodes[13];
 	bool	comp1QueueNodesMarks[13];
  
+	//!Messages Memory of component comp2
+	CEDROOMMessage	comp2Messages[10];
+	bool	comp2MessagesMarks[10];
+	CEDROOMQueue::CQueueNode	comp2QueueNodes[13];
+	bool	comp2QueueNodesMarks[13];
+ 
 	public:
  
 	UAHMarsDrone::CEDROOMMemory comp1Memory;
+	CCDroneMng::CEDROOMMemory comp2Memory;
  
 //!Set Memory
 	void SetMemory();
@@ -46,11 +54,13 @@ class CEDROOMSystemCommSAP{
 	CEDROOMLocalConnection connections[0];
  
 	UAHMarsDrone   * mp_comp1;
+	CCDroneMng   * mp_comp2;
  
  
 //!Set Components
  
-	void SetComponents(UAHMarsDrone   *p_comp1);
+	void SetComponents(UAHMarsDrone   *p_comp1,
+							CCDroneMng   *p_comp2);
  
  
  
@@ -83,13 +93,15 @@ static Pr_TaskRV_t main_task(Pr_TaskP_t);
 	CEDROOMSystemCommSAP  systemCommSAP;
  
 	UAHMarsDrone   * mp_comp1;
+	CCDroneMng   * mp_comp2;
  
 	public:
  
 	CEDROOMSystemDeployment();
  
 //!Deployment Configuration
-	void Config(UAHMarsDrone   *p_comp1);
+	void Config(UAHMarsDrone   *p_comp1,
+					CCDroneMng   *p_comp2);
  
 //!Deployment Start
 	void Start();
@@ -99,6 +111,7 @@ static Pr_TaskRV_t main_task(Pr_TaskP_t);
 //!Config Components
  
 	UAHMarsDrone::CEDROOMMemory 		* GetComp1Memory(){return &systemMemory.comp1Memory;}
+	CCDroneMng::CEDROOMMemory 		* GetComp2Memory(){return &systemMemory.comp2Memory;}
  
 };
 #endif
