@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -23,25 +23,25 @@ NULL
 2
 [Version Puerto]
 0
-DroneCtrl
+DroneMngCtrl
 0
 1
 0
 [Version Grafico Puerto]
 0
-45
-4
-CPDroneCtrl
+93
+39
+CPDroneMngCtrl
 [Version Puerto]
 0
-DroneTimer
+Timer
 0
 1
 1
 [Version Grafico Puerto]
 0
-37
-24
+29
+43
 EDROOMTimingSAP
 [FinPuertos]
 [ActoresComponente]
@@ -64,21 +64,13 @@ EDROOMTimingSAP
 [Pools]
 0
 [Modulos]
-1
-[Version Modulo]
-1
-pus_services_iface
- 
-v1
- 
-1
-1
+0
 [Eventos]
 1
 [Event]
 [Version]
 1
-EvTimerDroneTimer
+EvTimerTimer
 Timer
 [Maquina de Estados]
 [Version Maquina de Estados]
@@ -86,7 +78,7 @@ Timer
 Top
 NULL
 [Subestados]
-4
+1
 [Version SubEstados]
 3
 I
@@ -102,401 +94,20 @@ I
 0
 73 73 55 55
 [FinObjetoGrafico]
-SelfTest
-;
-;
-FDroneSelfTest();
-;
-;
-1
-0
-[ObjetoGrafico]
-[Version Objeto Grafico]
-0
-139 186 90 60
-[FinObjetoGrafico]
-Ready
-;
-;
-;
-;
-;
-1
-0
-[ObjetoGrafico]
-[Version Objeto Grafico]
-0
-154 320 175 60
-[FinObjetoGrafico]
-ExecFligthPlan
-;
-;
-;
-;
-;
-1
-0
-[ObjetoGrafico]
-[Version Objeto Grafico]
-0
-140 522 429 97
-[FinObjetoGrafico]
 [PuntosEleccion]
-2
+0
 [Version PuntosEleccion]
 2
-ExecTC
-0
-[ObjetoGrafico]
-[Version Objeto Grafico]
-0
-226 429 35 35
-[FinObjetoGrafico]
-CtrlAlgoritthm
-0
-[ObjetoGrafico]
-[Version Objeto Grafico]
-0
-441 334 35 35
-[FinObjetoGrafico]
-ExecTC
-0
-[Ramas]
-2
-[Version Ramas]
-5
-WaitFP
-true
-Ready
-DSubEst
-;
- 
- 
- 
-;
-;
-;
-;
-[GraficoRama]
-[Version GraficoRama]
-0
-226 446 164 380 3
-[FinGraficoRama]
-InitFlightPlan
-GExecFlightPlan()
-ExecFligthPlan
-DSubEst
-FInitFlightPlan();
-
- 
-
-;
-;
-;
-;
-[GraficoRama]
-[Version GraficoRama]
-0
-243 463 244 522 0
-[FinGraficoRama]
-CtrlAlgoritthm
-0
-[Ramas]
-2
-[Version Ramas]
-5
-PlanDone
-GFlightPlanDone()
-Ready
-DSubEst
-FToReady();
-
- 
-
-;
-;
-;
-;
-[GraficoRama]
-[Version GraficoRama]
-0
-441 351 329 350 3
-[FinGraficoRama]
-ProgNextCtrl
-true
-ExecFligthPlan
-DSubEst
-FProgNextCtrl();
-
- 
-
-;
-;
-;
-;
-[GraficoRama]
-[Version GraficoRama]
-0
-475 351 569 568 0
-[FinGraficoRama]
 [Transiciones]
-4
+0
 [Version Transicion]
 5
-Init
-I
-OSubEstI
-SelfTest
-DSubEst
-;
-[Trigger]
-EDROOMsl
-EDROOMStart
-true
- 
- 
- 
-;
-;
-;
-0
-;
-[GraficoTransicion]
-[Version GraficoTransicion]
-0
-118 119 181 186 0
-[FinGraficoTransicion]
-SetUp
-SelfTest
-OSubEst
-Ready
-DSubEst
-;
-[Trigger]
-DroneCtrl
-SDroneSetUp
-true
- 
- 
- 
-FGetConfig();
-;
-FReplyDroneReady();
-1
-;
-[GraficoTransicion]
-[Version GraficoTransicion]
-0
-189 246 215 320 0
-[FinGraficoTransicion]
-ExecTC
-Ready
-OSubEst
-ExecTC
-DPEleccion
-;
-[Trigger]
-DroneCtrl
-SDroneTC
-true
- 
- 
- 
-FExecDroneTC();
-;
-;
-0
-;
-[GraficoTransicion]
-[Version GraficoTransicion]
-0
-243 380 243 429 2
-[FinGraficoTransicion]
-CtrlAlgoritthm
-ExecFligthPlan
-OSubEst
-CtrlAlgoritthm
-DPEleccion
-FFlightCtrlAlgorithm();
-[Trigger]
-DroneTimer
-EDROOMSignalTimeout
-true
- 
- 
- 
-;
-;
-;
-0
-;
-[GraficoTransicion]
-[Version GraficoTransicion]
-0
-462 522 465 365 1
-[FinGraficoTransicion]
 [VariablesConstantes]
-1
-[Version VariYConst]
-0
-VNextCtrl
-Pr_Time
-
-Variable
 0
 [Metodos]
-10
+0
 [Version Metodos]
 21
-BasicAction
-FDroneSelfTest()
-0
-0
-0
-0
-1
- 
-2
-
-pus_service129_drone_selftest();
-MsgDataHandler
-FExecDroneTC()
-0
-0
-0
-0
-1
- 
-5
-	
-		// Data access
- 
- 
-varSDroneTC.ExecDroneTC();
-[ServiceRequest]
-Msg->data
-DroneCtrl
-SDroneTC
-CDTCHandler
-EDROOMprioNormal
-BasicAction
-FFlightCtrlAlgorithm()
-0
-0
-0
-0
-1
- 
-1
-pus_service129_flight_ctrl_algorithm();
-MsgDataHandler
-FGetConfig()
-0
-0
-0
-0
-1
- 
-4
-	
- 
- 
- pus_service129_setup(varSDroneSetUp);
-[ServiceRequest]
-Msg->data
-DroneCtrl
-SDroneSetUp
-CDDroneConfig
-EDROOMprioVeryHigh
-Inform
-FInitFlightPlan()
-0
-0
-0
-0
-1
- 
-8
- 
- 
- time.GetTime();
- time+=Pr_Time(0,100000);
- 
- VNextCtrl=time;
- 
- pus_service129_init_flight_plan();
-[ServiceRequest]
-InformAt
-DroneTimer
-EDROOMSignalTimeout
-NULL
-EDROOMprioVeryHigh
-Inform
-FProgNextCtrl()
-0
-0
-0
-0
-1
- 
-5
-	 
- 
- VNextCtrl+=Pr_Time(0,100000);
- 
- time=VNextCtrl;
-[ServiceRequest]
-InformAt
-DroneTimer
-EDROOMSignalTimeout
-NULL
-EDROOMprioVeryHigh
-ReplyMsg
-FReplyDroneReady()
-0
-0
-0
-0
-1
- 
-1
-pus_service129_drone_ready();
-[ServiceRequest]
-Msg->reply
-DroneCtrl
-SDroneReady
-NULL
-EDROOMprioVeryHigh
-BasicAction
-FToReady()
-0
-0
-0
-0
-1
- 
-1
-pus_service129_drone_ready();
-Guard
-GExecFlightPlan()
-0
-0
-0
-0
-1
- 
-1
-return pus_service129_flight_plan_ready();
-Guard
-GFlightPlanDone()
-0
-0
-0
-0
-1
- 
-1
-return pus_service129_flight_plan_done();
 [MaquinasSubEstados]
 0
 [FinMaquinasSubEstados]
