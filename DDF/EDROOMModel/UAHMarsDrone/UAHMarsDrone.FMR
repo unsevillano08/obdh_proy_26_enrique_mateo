@@ -6,7 +6,7 @@
 [Nombre Modelo]
 UAHMarsDrone
 [Modificado]
-0
+1
 [Opciones Modelo]
 [Version Opciones Modelo]
 4
@@ -19,9 +19,9 @@ UAHMarsDrone
 [CurrentTarget]
 0
 [MESP Directory]
-z:\home\atcsol\OBDH_2026-workspace\uah_mars_drone_freertos_hito1\asw
+C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DDF\uah_mars_drone_freertos_hito1\asw
 [MESP main Directory]
-z:\home\atcsol\OBDH_2026-workspace\uah_mars_drone_freertos_hito1
+C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DDF\uah_mars_drone_freertos_hito1
 [MESP main prototype]
 int main (void)
 [MESP main return]

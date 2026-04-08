@@ -102,7 +102,7 @@ bool UAHMarsDrone::EDROOMIsComponentFinished()
 {
 
 
-	return ( CEDROOMComponent::EDROOMIsComponentFinished());
+	return ( DroneMng.EDROOMIsComponentFinished() && CEDROOMComponent::EDROOMIsComponentFinished());
 
 }
 
