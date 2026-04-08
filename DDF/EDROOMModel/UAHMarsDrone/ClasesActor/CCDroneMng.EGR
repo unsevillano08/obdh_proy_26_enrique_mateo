@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-1
-1
+0
+0
 0
 [Estructura]
 [Version Estructura]
@@ -170,9 +170,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -210,9 +210,9 @@ true
 FlightPlan
 DSubEst
 FProgNextCtrl();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -341,7 +341,7 @@ true
 0
 VNextCtrl
 TEDROOMUInt8
-1
+0.1
 Constante
 0
 [Metodos]
@@ -413,12 +413,13 @@ FInitFlightPlan()
 0
 1
  
-11
+12
 	 
 	//Timing Service useful methods
 	 
 	time.GetTime(); // Get current monotonic time
-	time.Add(0,VNextCtrl); // Add X sec + Y microsec
+	time = time + VNextCtrl;
+	//time.Add(0,VNextCtrl); // Add X sec + Y microsec
 	 
  
  
@@ -439,12 +440,13 @@ FProgNextCtrl()
 0
 1
  
-6
+7
 	 
 	//Timing Service useful methods
 	 
 	time.GetTime(); // Get current monotonic time
-	time.Add(0,VNextCtrl); // Add X sec + Y microsec
+	time = time + VNextCtrl;
+	//time.Add(0,VNextCtrl); // Add X sec + Y microsec
 	 
 [ServiceRequest]
 InformAt
