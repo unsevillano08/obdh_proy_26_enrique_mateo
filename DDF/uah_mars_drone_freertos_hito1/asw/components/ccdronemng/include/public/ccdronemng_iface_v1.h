@@ -214,7 +214,7 @@ public:
 			EDROOMMemoryTrans };
 
 		//!Constants
-		const TEDROOMUInt8 VNextCtrl;
+		const TEDROOMInt8 VNextCtrl;
 
 
 

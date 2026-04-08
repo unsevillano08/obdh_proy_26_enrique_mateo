@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -340,8 +340,8 @@ true
 [Version VariYConst]
 0
 VNextCtrl
-TEDROOMUInt8
-0.1
+TEDROOMInt8
+1
 Constante
 0
 [Metodos]
@@ -418,8 +418,8 @@ FInitFlightPlan()
 	//Timing Service useful methods
 	 
 	time.GetTime(); // Get current monotonic time
-	time = time + VNextCtrl;
-	//time.Add(0,VNextCtrl); // Add X sec + Y microsec
+	//time = time + VNextCtrl;
+	time.Add(0,1); // Add X sec + Y microsec
 	 
  
  
@@ -440,13 +440,19 @@ FProgNextCtrl()
 0
 1
  
-7
+13
 	 
 	//Timing Service useful methods
 	 
+ // Add X sec + Y microsec
+	 
+
+	 
 	time.GetTime(); // Get current monotonic time
-	time = time + VNextCtrl;
-	//time.Add(0,VNextCtrl); // Add X sec + Y microsec
+	//time = time + VNextCtrl;
+
+	time.Add(0,1);
+
 	 
 [ServiceRequest]
 InformAt
