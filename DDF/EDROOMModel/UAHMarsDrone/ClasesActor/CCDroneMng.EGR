@@ -328,6 +328,13 @@ true
 553 529 521 328 3
 [FinGraficoTransicion]
 [VariablesConstantes]
+1
+[Version VariYConst]
+0
+VNextCtrl
+TEDROOMUInt8
+1
+Constante
 0
 [Metodos]
 9
@@ -414,12 +421,18 @@ FInitFlightPlan()
 0
 1
 
-5
+11
 	 
 	//Timing Service useful methods
 	 
-	//time.GetTime(); // Get current monotonic time
-	//time.Add(X,Y); // Add X sec + Y microsec
+	time.GetTime(); // Get current monotonic time
+	time.Add(0,VNextCtrl); // Add X sec + Y microsec
+	 
+
+
+
+pus_service129_init_flight_plan();
+
 [ServiceRequest]
 InformAt
 Timer
@@ -453,12 +466,13 @@ FProgNextCtrl()
 0
 1
 
-5
+6
 	 
 	//Timing Service useful methods
 	 
-	//time.GetTime(); // Get current monotonic time
-	//time.Add(X,Y); // Add X sec + Y microsec
+	time.GetTime(); // Get current monotonic time
+	time.Add(0,VNextCtrl); // Add X sec + Y microsec
+	 
 [ServiceRequest]
 InformAt
 Timer
