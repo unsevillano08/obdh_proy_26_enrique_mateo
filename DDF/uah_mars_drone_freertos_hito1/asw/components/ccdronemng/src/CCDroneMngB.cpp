@@ -117,7 +117,7 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FInitFlightPlan()
 	 
 	time.GetTime(); // Get current monotonic time
 	//time = time + VNextCtrl;
-	time.Add(0,1); // Add X sec + Y microsec
+time += Pr_Time(0, VNextCtrl);
 	 
  
  
@@ -145,7 +145,7 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FProgNextCtrl()
 	time.GetTime(); // Get current monotonic time
 	//time = time + VNextCtrl;
  
-time += PrTime(0, VNextCtrl);
+time += Pr_Time(0, VNextCtrl);
  
 	 
    //Program absolute timer 

@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -420,7 +420,7 @@ FInitFlightPlan()
 	 
 	time.GetTime(); // Get current monotonic time
 	//time = time + VNextCtrl;
-	time.Add(0,1); // Add X sec + Y microsec
+time += Pr_Time(0, VNextCtrl);
 	 
  
  
@@ -452,7 +452,7 @@ FProgNextCtrl()
 	time.GetTime(); // Get current monotonic time
 	//time = time + VNextCtrl;
  
-time += PrTime(0, VNextCtrl);
+time += Pr_Time(0, VNextCtrl);
  
 	 
 [ServiceRequest]
