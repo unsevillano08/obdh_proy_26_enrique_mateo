@@ -17,7 +17,7 @@ CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(CCDroneMng &act ):
 	MsgBack(EDROOMcomponent.MsgBack),
 	DroneMngCtrl(EDROOMcomponent.DroneMngCtrl),
 	Timer(EDROOMcomponent.Timer),
-	VNextCtrl(1)
+	VNextCtrl(100)
 {
 }
 
@@ -28,7 +28,7 @@ CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(EDROOM_CTX_Top_0 &context):
 	MsgBack(context.MsgBack),
 	DroneMngCtrl(context.DroneMngCtrl),
 	Timer(context.Timer),
-	VNextCtrl(1)
+	VNextCtrl(100)
 {
 
 }
@@ -111,6 +111,7 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FInitFlightPlan()
 {
    //Define absolute time
   Pr_Time time;
+
 	 
 	//Timing Service useful methods
 	 
@@ -139,13 +140,13 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FProgNextCtrl()
 	 
  // Add X sec + Y microsec
 	 
-
+ 
 	 
 	time.GetTime(); // Get current monotonic time
 	//time = time + VNextCtrl;
-
-	time.Add(0,1);
-
+ 
+time += PrTime(0, VNextCtrl);
+ 
 	 
    //Program absolute timer 
    Timer.InformAt( time ); 

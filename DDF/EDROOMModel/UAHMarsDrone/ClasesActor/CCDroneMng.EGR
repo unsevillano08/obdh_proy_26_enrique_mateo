@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-1
-1
+0
+0
 0
 [Estructura]
 [Version Estructura]
@@ -341,7 +341,7 @@ true
 0
 VNextCtrl
 TEDROOMInt8
-1
+100
 Constante
 0
 [Metodos]
@@ -413,7 +413,8 @@ FInitFlightPlan()
 0
 1
  
-12
+13
+
 	 
 	//Timing Service useful methods
 	 
@@ -430,7 +431,7 @@ pus_service129_init_flight_plan();
 InformAt
 Timer
 EDROOMSignalTimeout
-CDTCHandler
+
 EDROOMprioVeryHigh
 Inform
 FProgNextCtrl()
@@ -446,19 +447,19 @@ FProgNextCtrl()
 	 
  // Add X sec + Y microsec
 	 
-
+ 
 	 
 	time.GetTime(); // Get current monotonic time
 	//time = time + VNextCtrl;
-
-	time.Add(0,1);
-
+ 
+time += PrTime(0, VNextCtrl);
+ 
 	 
 [ServiceRequest]
 InformAt
 Timer
 EDROOMSignalTimeout
-CDTCHandler
+
 EDROOMprioVeryHigh
 ReplyMsg
 FReplyDroneReady()
