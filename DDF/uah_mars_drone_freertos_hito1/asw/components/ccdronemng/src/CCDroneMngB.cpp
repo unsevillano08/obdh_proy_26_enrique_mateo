@@ -111,19 +111,13 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FInitFlightPlan()
 {
    //Define absolute time
   Pr_Time time;
-
-	 
-	//Timing Service useful methods
-	 
-	time.GetTime(); // Get current monotonic time
-	//time = time + VNextCtrl;
-time += Pr_Time(0, VNextCtrl);
-	 
+// PERÍODO 100 ms
  
- 
+time.GetTime();
+time += Pr_Time(0, 100000);
+VNextCtrl = time;
  
 pus_service129_init_flight_plan();
- 
    //Program absolute timer 
    Timer.InformAt( time ); 
 }
@@ -135,19 +129,13 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FProgNextCtrl()
 {
    //Define absolute time
   Pr_Time time;
-	 
-	//Timing Service useful methods
-	 
- // Add X sec + Y microsec
-	 
  
-	 
-	time.GetTime(); // Get current monotonic time
-	//time = time + VNextCtrl;
  
-time += Pr_Time(0, VNextCtrl);
+time = VNextCtrl;
  
-	 
+time += Pr_Time(0, 100000);
+VNextCtrl = time;
+ 
    //Program absolute timer 
    Timer.InformAt( time ); 
 }

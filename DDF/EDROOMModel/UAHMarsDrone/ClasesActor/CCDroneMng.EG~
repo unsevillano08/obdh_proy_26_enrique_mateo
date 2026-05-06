@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -170,9 +170,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -210,9 +210,9 @@ true
 FlightPlan
 DSubEst
 FProgNextCtrl();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -413,25 +413,19 @@ FInitFlightPlan()
 0
 1
  
-13
-
-	 
-	//Timing Service useful methods
-	 
-	time.GetTime(); // Get current monotonic time
-	//time = time + VNextCtrl;
-time += Pr_Time(0, VNextCtrl);
-	 
+7
+// PERÍODO 100 ms
  
- 
+time.GetTime();
+time += Pr_Time(0, 100000);
+VNextCtrl = time;
  
 pus_service129_init_flight_plan();
- 
 [ServiceRequest]
 InformAt
 Timer
 EDROOMSignalTimeout
-
+ 
 EDROOMprioVeryHigh
 Inform
 FProgNextCtrl()
@@ -441,25 +435,19 @@ FProgNextCtrl()
 0
 1
  
-13
-	 
-	//Timing Service useful methods
-	 
- // Add X sec + Y microsec
-	 
+7
  
-	 
-	time.GetTime(); // Get current monotonic time
-	//time = time + VNextCtrl;
  
-time += Pr_Time(0, VNextCtrl);
+time = VNextCtrl;
  
-	 
+time += Pr_Time(0, 100000);
+VNextCtrl = time;
+ 
 [ServiceRequest]
 InformAt
 Timer
 EDROOMSignalTimeout
-
+ 
 EDROOMprioVeryHigh
 ReplyMsg
 FReplyDroneReady()
