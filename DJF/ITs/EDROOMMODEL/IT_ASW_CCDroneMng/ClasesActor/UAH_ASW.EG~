@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 3
 [Estructura]
 [Version Estructura]
@@ -34,7 +34,7 @@ Timer
 EDROOMTimingSAP
 [FinPuertos]
 [ActoresComponente]
-3
+4
 [Version Actor Componente]
 2
 TCManager
@@ -64,10 +64,10 @@ EDROOMprioNormal
  
 [Version Grafico Actor Componente]
 0
-22.0703
-49.2813
-42.5781
-64.6817
+10.9375
+45.7905
+31.4453
+61.1909
 CCHK_FDIRMng
 [Version Actor Componente]
 2
@@ -81,14 +81,31 @@ EDROOMprioNormal
  
 [Version Grafico Actor Componente]
 0
-59.5703
-47.2279
-81.6406
-63.4497
+65.4297
+47.4332
+87.5
+63.655
 CCBKGTCExec
+[Version Actor Componente]
+2
+DroneMng
+1
+0
+0
+10
+7
+EDROOMprioNormal
+ 
+[Version Grafico Actor Componente]
+0
+39.4531
+42.9158
+57.0312
+65.5031
+CCDroneMng
 [FinActoresComponente]
 [Uniones]
-2
+3
 [Version Union]
 0
 Union
@@ -105,6 +122,14 @@ BKGExecCtrl
 BKGExecCtrl
 TCManager
 BKGTCExec
+[Version Union]
+0
+Union3
+1
+DroneMngCtrl
+DroneMngCtrl
+DroneMng
+TCManager
 [FinUniones]
 [NumTimers]
 2
