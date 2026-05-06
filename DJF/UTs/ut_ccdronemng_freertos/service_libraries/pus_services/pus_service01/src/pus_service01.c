@@ -67,11 +67,21 @@ tc_accept_report_t pus_service1_tc_acceptation(tc_handler_t *ptc_handler) {
 		} else {
 
 			accept_report.accept_status = TCAcceptationOK;
-			uint8_t type = ptc_handler->tc_df_header.type;
-			uint8_t subtype = ptc_handler->tc_df_header.subtype;
+		    uint8_t type=ptc_handler->tc_df_header.type;
+		    uint8_t subtype=ptc_handler->tc_df_header.subtype;
 
-			//TODO Add TC[XX,YY] acceptation
+		    //TODO  AA_DONE Add TC[XX,YY] acceptation
 			switch (type) {
+			case (2):
+				switch (subtype) {
+				case (1):
+					break;
+				default:
+					accept_report.accept_status = TCAcceptationSubTypeError;
+
+				}
+				break;
+
 			case (3):
 				switch (subtype) {
 				case (5):
@@ -83,6 +93,7 @@ tc_accept_report_t pus_service1_tc_acceptation(tc_handler_t *ptc_handler) {
 
 				}
 				break;
+
 			case (17):
 				switch (subtype) {
 				case (1):
@@ -92,27 +103,55 @@ tc_accept_report_t pus_service1_tc_acceptation(tc_handler_t *ptc_handler) {
 
 				}
 				break;
+
 			case (20):
+					switch (subtype) {
+					case (1):
+					case (3):
+						break;
+					default:
+						accept_report.accept_status = TCAcceptationSubTypeError;
+
+					}
+					break;
+
+			case (5):
 				switch (subtype) {
-				case (1):
-				case (3):
+				case (5):
+				case (6):
 					break;
 				default:
 					accept_report.accept_status = TCAcceptationSubTypeError;
 
 				}
 				break;
-			case (129):
+
+			case (12):
+				switch (subtype) {
+				case (1):
+				case (2):
+				case (5):
+				case (6):
+					break;
+				default:
+					accept_report.accept_status = TCAcceptationSubTypeError;
+
+				}
+				break;
+
+			case (19):
 				switch (subtype) {
 				case (1):
 				case (2):
 				case (3):
+				case (4):
 					break;
 				default:
 					accept_report.accept_status = TCAcceptationSubTypeError;
 
 				}
 				break;
+
 			default:
 				//TC is not accepted
 				accept_report.accept_status = TCAcceptationTypeError;
