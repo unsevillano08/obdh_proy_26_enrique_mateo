@@ -420,7 +420,7 @@ time.GetTime();
 
 time += Pr_Time(0, 100000);
 
-VNextCtrl = time;               // <- Completar: Guarda el tiempo en la variable de estado
+VNextCtrl = time;
 [ServiceRequest]
 InformAt
 Timer
@@ -441,7 +441,7 @@ time = VNextCtrl;
 time += Pr_Time(0, 100000);
 
 VNextCtrl = time;
-DroneTimer.InformAt(time);
+
 [ServiceRequest]
 InformAt
 Timer

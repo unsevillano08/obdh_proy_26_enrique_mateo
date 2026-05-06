@@ -117,7 +117,7 @@ time.GetTime();
 
 time += Pr_Time(0, 100000);
 
-VNextCtrl = time;               // <- Completar: Guarda el tiempo en la variable de estado
+VNextCtrl = time;
    //Program absolute timer 
    Timer.InformAt( time ); 
 }
@@ -134,7 +134,7 @@ time = VNextCtrl;
 time += Pr_Time(0, 100000);
 
 VNextCtrl = time;
-DroneTimer.InformAt(time);
+
    //Program absolute timer 
    Timer.InformAt( time ); 
 }
