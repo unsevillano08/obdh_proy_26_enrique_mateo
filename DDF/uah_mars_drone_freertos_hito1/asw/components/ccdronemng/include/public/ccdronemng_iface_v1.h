@@ -213,16 +213,17 @@ public:
 			CtrlAlgorithm_ProgNextCtrl,
 			EDROOMMemoryTrans };
 
-		//!Constants
-		const Pr_Time VNextCtrl;
 
 
+		//!Variables
+		Pr_Time &VNextCtrl;
 
 
 
 
 		//!Constructor
-		EDROOM_CTX_Top_0 (CCDroneMng &act );
+		EDROOM_CTX_Top_0 (CCDroneMng &act,
+				Pr_Time & EDROOMpVarVNextCtrl );
 
 		//!Copy constructor
 		EDROOM_CTX_Top_0 (EDROOM_CTX_Top_0 &context);
@@ -324,6 +325,8 @@ public:
 		//!next state identifier
 		EDROOM_CTX_Top_0::TEDROOMStateID edroomNextState;
 
+		//!Variables
+		Pr_Time VNextCtrl;
 
 
 

@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-1
-1
+0
+0
 0
 [Estructura]
 [Version Estructura]
@@ -341,8 +341,8 @@ true
 0
 VNextCtrl
 Pr_Time
-100000
-Constante
+
+Variable
 0
 [Metodos]
 10

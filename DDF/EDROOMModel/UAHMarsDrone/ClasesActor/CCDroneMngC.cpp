@@ -10,14 +10,15 @@
 
 	// CONSTRUCTORS***********************************************
 
-CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(CCDroneMng &act ):
+CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(CCDroneMng &act,
+	 Pr_Time & EDROOMpVarVNextCtrl ):
 
 	EDROOMcomponent(act),
 	Msg(EDROOMcomponent.Msg),
 	MsgBack(EDROOMcomponent.MsgBack),
 	DroneMngCtrl(EDROOMcomponent.DroneMngCtrl),
 	Timer(EDROOMcomponent.Timer),
-	VNextCtrl(100000)
+	VNextCtrl(EDROOMpVarVNextCtrl)
 {
 }
 
@@ -28,7 +29,7 @@ CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(EDROOM_CTX_Top_0 &context):
 	MsgBack(context.MsgBack),
 	DroneMngCtrl(context.DroneMngCtrl),
 	Timer(context.Timer),
-	VNextCtrl(100000)
+	VNextCtrl(context.VNextCtrl)
 {
 
 }
@@ -197,7 +198,8 @@ return pus_service129_flight_plan_done();
 	// CONSTRUCTOR*************************************************
 
 CCDroneMng::EDROOM_SUB_Top_0::EDROOM_SUB_Top_0 (CCDroneMng&act):
-		EDROOM_CTX_Top_0(act)
+		EDROOM_CTX_Top_0(act,
+			VNextCtrl)
 {
 
 }
