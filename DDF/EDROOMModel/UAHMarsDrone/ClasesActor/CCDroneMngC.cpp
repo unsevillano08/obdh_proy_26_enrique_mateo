@@ -17,7 +17,7 @@ CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(CCDroneMng &act ):
 	MsgBack(EDROOMcomponent.MsgBack),
 	DroneMngCtrl(EDROOMcomponent.DroneMngCtrl),
 	Timer(EDROOMcomponent.Timer),
-	VNextCtrl(100)
+	VNextCtrl(100000)
 {
 }
 
@@ -28,7 +28,7 @@ CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(EDROOM_CTX_Top_0 &context):
 	MsgBack(context.MsgBack),
 	DroneMngCtrl(context.DroneMngCtrl),
 	Timer(context.Timer),
-	VNextCtrl(100)
+	VNextCtrl(100000)
 {
 
 }
@@ -111,13 +111,13 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FInitFlightPlan()
 {
    //Define absolute time
   Pr_Time time;
-// PERÍODO 100 ms
- 
-time.GetTime();
-VNextCtrl += Pr_Time(0, 100000);
-time= VNextCtrl 
- 
 pus_service129_init_flight_plan();
+
+time.GetTime();
+
+time += Pr_Time(0, 100000);
+
+VNextCtrl = time;               // <- Completar: Guarda el tiempo en la variable de estado
    //Program absolute timer 
    Timer.InformAt( time ); 
 }
@@ -129,13 +129,12 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FProgNextCtrl()
 {
    //Define absolute time
   Pr_Time time;
- 
- 
 time = VNextCtrl;
- 
-VNextCtrl += Pr_Time(0, 100000);
-time = VNextCtrl;
- 
+
+time += Pr_Time(0, 100000);
+
+VNextCtrl = time;
+DroneTimer.InformAt(time);
    //Program absolute timer 
    Timer.InformAt( time ); 
 }

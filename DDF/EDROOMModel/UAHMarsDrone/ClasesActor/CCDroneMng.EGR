@@ -150,14 +150,14 @@ ExecTC
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-224 418 35 35
+222 408 35 35
 [FinObjetoGrafico]
 CtrlAlgorithm
 0
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-517 298 35 35
+549 298 35 35
 [FinObjetoGrafico]
 ExecTC
 0
@@ -180,7 +180,7 @@ FInitFlightPlan();
 [GraficoRama]
 [Version GraficoRama]
 0
-233 451 252 529 0
+231 441 252 529 0
 [FinGraficoRama]
 WaitFP
 true
@@ -197,7 +197,7 @@ DSubEst
 [GraficoRama]
 [Version GraficoRama]
 0
-224 435 144 344 3
+222 425 144 344 3
 [FinGraficoRama]
 CtrlAlgorithm
 0
@@ -220,7 +220,7 @@ FProgNextCtrl();
 [GraficoRama]
 [Version GraficoRama]
 0
-534 332 633 557 0
+566 332 633 557 0
 [FinGraficoRama]
 PlanDone
 GFlightPlanDone()
@@ -237,7 +237,7 @@ FToReady();
 [GraficoRama]
 [Version GraficoRama]
 0
-522 301 293 302 2
+554 301 293 302 2
 [FinGraficoRama]
 [Transiciones]
 4
@@ -310,7 +310,7 @@ FExecDroneTC();
 [GraficoTransicion]
 [Version GraficoTransicion]
 0
-238 344 241 418 0
+238 344 239 408 0
 [FinGraficoTransicion]
 CtrlAlgorithm
 FlightPlan
@@ -333,15 +333,15 @@ true
 [GraficoTransicion]
 [Version GraficoTransicion]
 0
-553 529 521 328 3
+553 529 553 328 1
 [FinGraficoTransicion]
 [VariablesConstantes]
 1
 [Version VariYConst]
 0
 VNextCtrl
-TEDROOMInt8
-100
+Pr_Time
+100000
 Constante
 0
 [Metodos]
@@ -414,13 +414,13 @@ FInitFlightPlan()
 1
  
 7
-// PERÍODO 100 ms
- 
-time.GetTime();
-VNextCtrl += Pr_Time(0, 100000);
-time= VNextCtrl 
- 
 pus_service129_init_flight_plan();
+
+time.GetTime();
+
+time += Pr_Time(0, 100000);
+
+VNextCtrl = time;               // <- Completar: Guarda el tiempo en la variable de estado
 [ServiceRequest]
 InformAt
 Timer
@@ -435,14 +435,13 @@ FProgNextCtrl()
 0
 1
  
-7
- 
- 
+6
 time = VNextCtrl;
- 
-VNextCtrl += Pr_Time(0, 100000);
-time = VNextCtrl;
- 
+
+time += Pr_Time(0, 100000);
+
+VNextCtrl = time;
+DroneTimer.InformAt(time);
 [ServiceRequest]
 InformAt
 Timer
