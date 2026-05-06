@@ -19,9 +19,9 @@ UT_CCDroneMng
 [CurrentTarget]
 0
 [MESP Directory]
-z:\home\atcsol\OBDH_2026-workspace\ut_ccdronemng_freertos\asw
+C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DJF\UTs\ut_ccdronemng_freertos\asw
 [MESP main Directory]
-z:\home\atcsol\OBDH_2026-workspace\ut_ccdronemng_freertos
+C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DJF\UTs\ut_ccdronemng_freertos
 [MESP main prototype]
 int main (void)
 [MESP main return]

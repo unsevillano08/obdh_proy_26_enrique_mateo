@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-1
-1
+0
+0
 0
 [Estructura]
 [Version Estructura]
@@ -170,9 +170,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -227,9 +227,9 @@ GFlightPlanDone()
 Ready
 DSubEst
 FToReady();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -413,18 +413,19 @@ FInitFlightPlan()
 0
 1
  
-6
-
+7
+pus_service129_init_flight_plan();
  
 time.GetTime();
+ 
 time += Pr_Time(0, 100000);
+ 
 VNextCtrl = time;
-pus_service129_init_flight_plan();
 [ServiceRequest]
 InformAt
 Timer
 EDROOMSignalTimeout
-
+ 
 EDROOMprioVeryHigh
 Inform
 FProgNextCtrl()

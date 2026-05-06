@@ -5,12 +5,12 @@
 0
 0
 0
-1
+2
 [Version Mensaje]
 1
 [Version Senal]
 0
-SHK_FDIR_TC
+SDroneTC
 [Version Dato]
 1
 CDTCHandler
@@ -18,17 +18,30 @@ C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DJF\ITs\EDROOMMODEL\
 es.uah.aut.srg.edroom.mclev.data_sai.cdtchandler
 v1
 0
+[Version Mensaje]
+1
+[Version Senal]
+0
+SDroneSetUp
+[Version Dato]
+1
+CDDroneConfig
+C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DJF\ITs\EDROOMMODEL\IT_ASW_CCDroneMng\\
+es.uah.aut.srg.edroom.mclev.data_sai.cddroneconfig
+v1
+1
 1
 [Version Mensaje]
 1
 [Version Senal]
 0
-SEvAction
+SDroneReady
 [Version Dato]
 1
-CDEvAction
+NULL
 C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DJF\ITs\EDROOMMODEL\IT_ASW_CCDroneMng\
-es.uah.aut.srg.edroom.mclev.data_sai.cdevaction
+es.uah.aut.srg.edroom.mclev.data_sai.NULL
 v1
-0
+2
+SDroneSetUp
 0
