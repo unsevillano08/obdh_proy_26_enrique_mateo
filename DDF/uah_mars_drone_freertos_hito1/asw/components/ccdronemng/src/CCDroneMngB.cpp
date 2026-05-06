@@ -114,8 +114,8 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FInitFlightPlan()
 // PERÍODO 100 ms
  
 time.GetTime();
-time += Pr_Time(0, 100000);
-VNextCtrl = time;
+VNextCtrl += Pr_Time(0, 100000);
+time= VNextCtrl 
  
 pus_service129_init_flight_plan();
    //Program absolute timer 
@@ -133,8 +133,8 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FProgNextCtrl()
  
 time = VNextCtrl;
  
-time += Pr_Time(0, 100000);
-VNextCtrl = time;
+VNextCtrl += Pr_Time(0, 100000);
+time = VNextCtrl;
  
    //Program absolute timer 
    Timer.InformAt( time ); 
