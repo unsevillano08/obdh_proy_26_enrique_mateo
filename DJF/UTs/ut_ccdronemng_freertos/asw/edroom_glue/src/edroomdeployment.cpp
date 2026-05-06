@@ -86,22 +86,7 @@ TEDROOMSignal CEDROOMSystemCommSAP::C1MainActor_PTesterCtrl__C2DroneMngTester_PT
  
 }
  
-TEDROOMSignal CEDROOMSystemCommSAP::C3DroneMng_PDroneCtrl__C2DroneMngTester_PDroneCtrl(TEDROOMSignal signalOut){
- 
-	TEDROOMSignal signalIn;
- 
-	switch(signalOut){
- 
-		case( CCDroneMng::SDroneReady):	 signalIn=CCDroneMngTester::SDroneReady; break;
- 
-		default: signalIn=(TEDROOMSignal)(-1); break;
- 
-	}
-	return signalIn;
- 
-}
- 
-TEDROOMSignal CEDROOMSystemCommSAP::C2DroneMngTester_PDroneCtrl__C3DroneMng_PDroneCtrl(TEDROOMSignal signalOut){
+TEDROOMSignal CEDROOMSystemCommSAP::C2DroneMngTester_PDroneCtrl__C3DroneMng_PDroneMngCtrl(TEDROOMSignal signalOut){
  
 	TEDROOMSignal signalIn;
  
@@ -110,6 +95,21 @@ TEDROOMSignal CEDROOMSystemCommSAP::C2DroneMngTester_PDroneCtrl__C3DroneMng_PDro
 		case( CCDroneMngTester::SDroneSetUp):	 signalIn=CCDroneMng::SDroneSetUp; break;
  
 		case( CCDroneMngTester::SDroneTC):	 signalIn=CCDroneMng::SDroneTC; break;
+ 
+		default: signalIn=(TEDROOMSignal)(-1); break;
+ 
+	}
+	return signalIn;
+ 
+}
+ 
+TEDROOMSignal CEDROOMSystemCommSAP::C3DroneMng_PDroneMngCtrl__C2DroneMngTester_PDroneCtrl(TEDROOMSignal signalOut){
+ 
+	TEDROOMSignal signalIn;
+ 
+	switch(signalOut){
+ 
+		case( CCDroneMng::SDroneReady):	 signalIn=CCDroneMngTester::SDroneReady; break;
  
 		default: signalIn=(TEDROOMSignal)(-1); break;
  
@@ -136,8 +136,8 @@ void CEDROOMSystemCommSAP::RegisterInterfaces(){
 	m_localCommSAP.RegisterInterface(3, mp_comp2->DroneCtrl, mp_comp2);
  
 	// Register Interface for Component 3
-	m_localCommSAP.RegisterInterface(1, mp_comp3->DroneTimer, mp_comp3);
-	m_localCommSAP.RegisterInterface(2, mp_comp3->DroneCtrl, mp_comp3);
+	m_localCommSAP.RegisterInterface(1, mp_comp3->Timer, mp_comp3);
+	m_localCommSAP.RegisterInterface(2, mp_comp3->DroneMngCtrl, mp_comp3);
  
 }
  
@@ -151,9 +151,9 @@ void CEDROOMSystemCommSAP::SetLocalConnections(){
 					C2DroneMngTester_PTesterCtrl__C1MainActor_PTesterCtrl, 
 					C1MainActor_PTesterCtrl__C2DroneMngTester_PTesterCtrl);
  
-	m_localCommSAP.Connect(mp_comp3->DroneCtrl, mp_comp2->DroneCtrl, connections[1], 
-					C3DroneMng_PDroneCtrl__C2DroneMngTester_PDroneCtrl, 
-					C2DroneMngTester_PDroneCtrl__C3DroneMng_PDroneCtrl);
+	m_localCommSAP.Connect(mp_comp2->DroneCtrl, mp_comp3->DroneMngCtrl, connections[1], 
+					C2DroneMngTester_PDroneCtrl__C3DroneMng_PDroneMngCtrl, 
+					C3DroneMng_PDroneMngCtrl__C2DroneMngTester_PDroneCtrl);
  
 }
  

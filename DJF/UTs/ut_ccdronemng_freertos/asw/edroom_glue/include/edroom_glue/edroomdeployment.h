@@ -80,8 +80,8 @@ class CEDROOMSystemCommSAP{
  
 //Signal Conversion
  
-	static TEDROOMSignal C3DroneMng_PDroneCtrl__C2DroneMngTester_PDroneCtrl(TEDROOMSignal signal);
-	static TEDROOMSignal C2DroneMngTester_PDroneCtrl__C3DroneMng_PDroneCtrl(TEDROOMSignal signal);
+	static TEDROOMSignal C2DroneMngTester_PDroneCtrl__C3DroneMng_PDroneMngCtrl(TEDROOMSignal signal);
+	static TEDROOMSignal C3DroneMng_PDroneMngCtrl__C2DroneMngTester_PDroneCtrl(TEDROOMSignal signal);
  
  
 //!Register Interfaces

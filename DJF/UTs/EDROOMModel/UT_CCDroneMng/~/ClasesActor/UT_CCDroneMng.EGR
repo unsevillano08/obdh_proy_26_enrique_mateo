@@ -56,7 +56,7 @@ WatchDogTimer
 EDROOMTimingSAP
 [FinPuertos]
 [ActoresComponente]
-1
+2
 [Version Actor Componente]
 2
 DroneMngTester
@@ -74,9 +74,26 @@ EDROOMprioNormal
 43.75
 33.4702
 CCDroneMngTester
+[Version Actor Componente]
+2
+DroneMng
+1
+0
+0
+10
+7
+EDROOMprioNormal
+ 
+[Version Grafico Actor Componente]
+0
+25.1953
+53.3881
+42.7734
+75.9754
+CCDroneMng
 [FinActoresComponente]
 [Uniones]
-1
+2
 [Version Union]
 0
 Union
@@ -85,6 +102,14 @@ TesterCtrl
 TesterCtrl
 DroneMngTester
 this
+[Version Union]
+0
+Union2
+1
+DroneCtrl
+DroneMngCtrl
+DroneMngTester
+DroneMng
 [FinUniones]
 [NumTimers]
 4
