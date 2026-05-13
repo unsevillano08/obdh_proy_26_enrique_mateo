@@ -22,7 +22,7 @@
  
  
  
-extern "C" rtems_task Init (uint32_t arg){
+int main (void){
  
  
  

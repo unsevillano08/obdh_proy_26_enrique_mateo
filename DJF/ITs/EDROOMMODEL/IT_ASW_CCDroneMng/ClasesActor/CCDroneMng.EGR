@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -240,7 +240,7 @@ FToReady();
 554 301 293 302 2
 [FinGraficoRama]
 [Transiciones]
-4
+5
 [Version Transicion]
 5
 Init
@@ -334,6 +334,29 @@ true
 [Version GraficoTransicion]
 0
 553 529 553 328 1
+[FinGraficoTransicion]
+ExecTcInFlight
+FlightPlan
+OSubEst
+FlightPlan
+DSubEst
+;
+[Trigger]
+DroneMngCtrl
+SDroneSetUp
+true
+ 
+ 
+ 
+FExecDroneTC();
+;
+;
+1
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+257 600 466 600 5
 [FinGraficoTransicion]
 [VariablesConstantes]
 1
