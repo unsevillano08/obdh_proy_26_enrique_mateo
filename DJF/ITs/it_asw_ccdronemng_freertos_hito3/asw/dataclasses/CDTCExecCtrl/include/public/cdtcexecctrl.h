@@ -59,7 +59,7 @@ class CDTCExecCtrl{
 	 * \return true if it is a Drone telecommand
 	 *
 	 */
-	bool IsDroneTC() {  };
+	bool IsDroneTC() {return(ExecCtrlDroneTC==mExecCtrl);};
 	
 };
 

@@ -61,7 +61,7 @@ CDTCExecCtrl CDTCHandler::GetExecCtrl() {
 	switch (type) {
 
 	case (3):
-	case (4):
+//	case (4):
 	case (5):
 	case (12):
 	case (19):
@@ -77,7 +77,9 @@ CDTCExecCtrl CDTCHandler::GetExecCtrl() {
 		execCtrl.mExecCtrl = ExecCtrlBKGTC;
 		break;
 
-
+	case (129):
+		execCtrl.mExecCtrl = ExecCtrlDroneTC;
+		break;
 	default:
 
 		execCtrl.mExecCtrl = ExecCtrlPrioTC;
@@ -160,8 +162,8 @@ void CDTCHandler::ExecHK_FDIRTC() {
 		case (3):
 			pus_service3_exec_tc(&mTCHandler);
 			break;
-		case (4):
-			pus_service4_exec_tc(&mTCHandler);
+//		case (4):
+//			pus_service4_exec_tc(&mTCHandler);
 			break;
 		case (5):
 			pus_service5_exec_tc(&mTCHandler);
@@ -226,7 +228,10 @@ void CDTCHandler::ExecDroneTC() {
 
 		switch (type) {
 
-
+		case (129):
+			// Llamada a la función del servicio PUS 129 para procesar los subtipos del dron
+			pus_service129_exec_tc(&mTCHandler);
+			break;
 
 		default:
 			//No defined code for this TC. Design error
@@ -239,4 +244,5 @@ void CDTCHandler::ExecDroneTC() {
 	}
 
 }
+
 
