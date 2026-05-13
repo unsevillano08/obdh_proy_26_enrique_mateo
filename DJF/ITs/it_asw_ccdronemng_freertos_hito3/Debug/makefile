@@ -49,6 +49,12 @@ RM := rm -rf
 -include asw/dataclasses/CDTCMemDescriptor/src/subdir.mk
 -include asw/dataclasses/CDTCHandler/src/subdir.mk
 -include asw/dataclasses/CDEvAction/src/subdir.mk
+-include asw/components/uah_asw/src/subdir.mk
+-include asw/components/cctcmanager/src/subdir.mk
+-include asw/components/cchk_fdirmng/src/subdir.mk
+-include asw/components/ccdronemng/src/subdir.mk
+-include asw/components/ccbkgtcexec/src/subdir.mk
+-include subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)

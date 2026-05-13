@@ -46,7 +46,7 @@ void pus_services_startup(void * irq_interface) {
 
 	pus_service1_tx_TM_5_1_start_up();
 	
-	pus_service4_startup();
+//	pus_service4_startup();
 	pus_service12_startup();
 }
 
