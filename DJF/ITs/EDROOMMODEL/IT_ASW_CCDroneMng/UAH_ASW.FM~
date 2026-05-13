@@ -6,7 +6,7 @@
 [Nombre Modelo]
 UAH_ASW
 [Modificado]
-0
+1
 [Opciones Modelo]
 [Version Opciones Modelo]
 4
@@ -19,13 +19,13 @@ UAH_ASW
 [CurrentTarget]
 0
 [MESP Directory]
-C:\Users\Lenovo\Documents\GitHub\OBDH\Prac7\asw_pus_rtems_5_0_leon3_st19_st2\asw
+C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DJF\ITs\it_asw_ccdronemng_freertos_hito3\asw
 [MESP main Directory]
-C:\Users\Lenovo\Documents\GitHub\OBDH\Prac7\asw_pus_rtems_5_0_leon3_st19_st2
+C:\Users\Lenovo\Documents\GitHub\obdh_proy_26_enrique_mateo\DJF\ITs\it_asw_ccdronemng_freertos_hito3
 [MESP main prototype]
-extern "C" rtems_task Init (uint32_t arg)
+int main (void)
 [MESP main return]
-;
+return 0;
 [Dyn Priority]
 0
 [Main Cmp Priority]
