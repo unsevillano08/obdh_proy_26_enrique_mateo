@@ -43,6 +43,6 @@ extern "C" rtems_task Init (uint32_t arg){
  
 	systemDeployment.Start();
  
-	;
+	return 0;
  
 }
