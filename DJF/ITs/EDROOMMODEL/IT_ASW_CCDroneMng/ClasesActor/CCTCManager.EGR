@@ -210,9 +210,9 @@ GAcceptTC()
 ValidTC
 DSubEst
 FMngTCAcceptation();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -267,9 +267,9 @@ true
 Ready
 DSubEst
 FExecPrioTC();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -284,9 +284,9 @@ GFwdToHK_FDIR()
 Ready
 DSubEst
 ;
-
  
-
+ 
+ 
 ;
 FFwdHK_FDIRTC();
 ;
@@ -387,9 +387,9 @@ HandleTC
 DPEleccion
 FTCExecCtrl();
 [Trigger]
- 
- 
- 
+
+
+
  
  
  
@@ -490,6 +490,21 @@ FFwdBKGTC()
 send
 BKGExecCtrl
 SBKGTC
+CDTCHandler
+EDROOMprioNormal
+SendMsg
+FFwdDroneTC()
+0
+0
+0
+0
+1
+ 
+0
+[ServiceRequest]
+send
+DroneMngCtrl
+SDroneTC
 CDTCHandler
 EDROOMprioNormal
 SendMsg
@@ -634,6 +649,16 @@ GFwdBKGTC()
 return VTCExecCtrl.IsBKGTC();
  
 Guard
+GFwdDroneTC()
+0
+0
+0
+0
+1
+ 
+1
+return VTCExecCtrl.IsDroneTC();
+Guard
 GFwdToHK_FDIR()
 0
 0
@@ -653,31 +678,6 @@ GToReboot()
  
 1
 return VTCExecCtrl.IsRebootTC();
-Guard
-GFwdDroneTC()
-0
-0
-0
-0
-1
-
-1
-return VTCExecCtrl.IsDroneTC();
-SendMsg
-FFwdDroneTC()
-0
-0
-0
-0
-1
-
-0
-[ServiceRequest]
-send
-DroneMngCtrl
-SDroneTC
-CDTCHandler
-EDROOMprioNormal
 [MaquinasSubEstados]
 1
 Ready
@@ -747,12 +747,9 @@ FInvokeDroneSetUp()
 0
 0
 1
-
-8
-	
-		// Complete Data 
-	
-	*pSDroneSetUp_Data=
+ 
+5
+ 
 pSDroneSetUp_Data->ZMinBeforeAdvance=10;
 pSDroneSetUp_Data->DefaultKp=0.2;
 pSDroneSetUp_Data->DefaultKi=0.15;
