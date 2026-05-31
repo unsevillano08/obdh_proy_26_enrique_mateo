@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-0
-0
+1
+1
 0
 [Estructura]
 [Version Estructura]
@@ -210,9 +210,9 @@ GAcceptTC()
 ValidTC
 DSubEst
 FMngTCAcceptation();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -284,9 +284,9 @@ GFwdToHK_FDIR()
 Ready
 DSubEst
 ;
+
  
- 
- 
+
 ;
 FFwdHK_FDIRTC();
 ;
@@ -387,9 +387,9 @@ HandleTC
 DPEleccion
 FTCExecCtrl();
 [Trigger]
-
-
-
+ 
+ 
+ 
  
  
  
@@ -500,7 +500,9 @@ FFwdDroneTC()
 0
 1
  
-0
+2
+	
+	*pSDroneTC_Data=VCurrentTC;
 [ServiceRequest]
 send
 DroneMngCtrl
