@@ -398,7 +398,7 @@ Msg->data
 DroneMngCtrl
 SDroneTC
 CDTCHandler
-EDROOMprioVeryHigh
+EDROOMprioNormal
 BasicAction
 FFlightCtrlAlgorithm()
 0
