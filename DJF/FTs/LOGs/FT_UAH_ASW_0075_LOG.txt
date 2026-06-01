@@ -1,0 +1,121 @@
+
+Current OBT is = 100000
+GSS Rx TM [5,1] Informative EvID = 0x1001 : START_UP 
+
+GSS Rx TM [5,1] Informative EvID = 0x1004 : DRONE SELF TEST DONE
+
+
+Current OBT is = 100001
+
+Current OBT is = 100002
+
+Current OBT is = 100003
+
+Current OBT is = 100004
+
+Current OBT is = 100005
+
+Current OBT is = 100006
+
+Current OBT is = 100007
+
+Current OBT is = 100008
+
+Current OBT is = 100009
+
+Current OBT is = 100010
+
+Current OBT is = 100011
+
+Current OBT is = 100012
+
+Current OBT is = 100013
+
+Current OBT is = 100014
+
+Current OBT is = 100015
+
+Current OBT is = 100016
+
+Current OBT is = 100017
+
+Current OBT is = 100018
+
+Current OBT is = 100019
+
+Current OBT is = 100020
+
+Current OBT is = 100021
+
+Current OBT is = 100022
+
+Current OBT is = 100023
+
+Current OBT is = 100024
+
+Current OBT is = 100025
+
+Current OBT is = 100026
+
+Current OBT is = 100027
+
+Current OBT is = 100028
+
+Current OBT is = 100029
+
+Current OBT is = 100030
+
+Current OBT is = 100031
+
+Current OBT is = 100032
+
+Current OBT is = 100033
+
+Current OBT is = 100034
+
+Current OBT is = 100035
+
+Current OBT is = 100036
+
+Current OBT is = 100037
+
+Current OBT is = 100038
+
+Current OBT is = 100039
+
+Current OBT is = 100040
+
+Current OBT is = 100041
+
+Current OBT is = 100042
+
+Current OBT is = 100043
+
+Current OBT is = 100044
+
+Current OBT is = 100045
+
+Current OBT is = 100046
+
+Current OBT is = 100047
+
+GSS Tx TC[20,3] FT_UAH_ASW_SetGetParam_0075 step 3, Update PID 15 to 99
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+
+Current OBT is = 100048
+
+Current OBT is = 100049
+
+GSS Tx TC[20,1] FT_UAH_ASW_SetGetParam_0075 step 4, Get PID 15
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [20,2] PID 15 value =99
+
+GSS Rx TM [1,7]
+
+Current OBT is = 100050
+
+Current OBT is = 100051
+

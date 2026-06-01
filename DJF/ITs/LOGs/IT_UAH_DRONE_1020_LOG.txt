@@ -1,0 +1,290 @@
+
+Current OBT is = 100000
+GSS Rx TM [5,1] Informative EvID = 0x1001 : START_UP 
+
+GSS Rx TM [5,1] Informative EvID = 0x1004 : DRONE SELF TEST DONE
+
+
+Current OBT is = 100001
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100002
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.09 volts, V3.3: 2.40 volts, I5: 3.21 mA, I3.3: 4.85 mA, Temp: -2.52 degree
+					, Wind: 3.75 m/s }
+
+
+Current OBT is = 100003
+
+GSS Tx TC[12,5] IT_UAH_DRONE_FDIR_1020 step 0, Config PMODID 0 for monitoring PID UAH_DRONE_Wind 
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100004
+
+GSS Tx TC[19,1] IT_UAH_DRONE_FDIR_1020 step 1, 0x4002 Action is Abort Flight
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+
+Current OBT is = 100005
+
+GSS Tx TC[19,4] IT_UAH_DRONE_FDIR_1020 step 2, 0x4002 Action enabled
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.12 volts, V3.3: 2.39 volts, I5: 3.21 mA, I3.3: 4.85 mA, Temp: -2.50 degree
+					, Wind: 3.75 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100006
+
+GSS Tx TC[12,1] IT_UAH_DRONE_FDIR_1020 step 3, Enable Monitoring PMODID 0
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+
+Current OBT is = 100007
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+GSS Rx TM [12,12] PMONID = 0 PID 5 Check Limits value = Wind: 3.75 m/s limit = Wind: 0.00 m/s prev status Unchecked current status Within Limits OBT = 100006
+
+
+Current OBT is = 100008
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.12 volts, V3.3: 2.38 volts, I5: 3.20 mA, I3.3: 4.87 mA, Temp: -2.51 degree
+					, Wind: 3.75 m/s }
+
+
+Current OBT is = 100009
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100010
+
+GSS Tx TC[129,2] IT_UAH_DRONE_0010 step 4, Set PID Params to 0.2, 0.15, 0.05
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+
+Current OBT is = 100011
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.09 volts, V3.3: 2.38 volts, I5: 3.18 mA, I3.3: 4.85 mA, Temp: -2.51 degree
+					, Wind: 3.75 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100012
+
+GSS Tx TC[129,1] IT_UAH_DRONE_0010 step 5, Set Flight Plan X=150.5, Y=90.5, Z=30.2
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+
+Current OBT is = 100013
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100014
+
+GSS Tx TC[129,3] IT_UAH_DRONE_0010 step 6, Exec Flight Plan
+GSS Rx TM [1,1]
+GSS Rx TM [1,3]
+GSS Rx TM [1,7]
+GSS Rx TM [5,1] Informative EvID = 0x1006 : DRONE TAKE OFF
+
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.12 volts, V3.3: 2.36 volts, I5: 3.17 mA, I3.3: 4.87 mA, Temp: -2.50 degree
+					, Wind: 10.22 m/s }
+
+
+Current OBT is = 100015
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 3.09 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 2.29 m/s }
+
+
+Current OBT is = 100016
+
+Current OBT is = 100017
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.10 volts, V3.3: 2.40 volts, I5: 3.20 mA, I3.3: 4.88 mA, Temp: -2.50 degree
+					, Wind: 11.75 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 7.01 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 1.46 m/s }
+
+
+Current OBT is = 100018
+
+Current OBT is = 100019
+GSS Rx TM [5,1] Informative EvID = 0x1007 : DRONE ADVANCE
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 9.04 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.60 m/s }
+
+
+Current OBT is = 100020
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.10 volts, V3.3: 2.38 volts, I5: 3.19 mA, I3.3: 4.87 mA, Temp: -2.50 degree
+					, Wind: 15.81 m/s }
+
+
+Current OBT is = 100021
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 9.50 m, Y= 9.50 m, Z= 16.31 m, 
+					 Vx= 10.00 m/s, Vy= 10.00 m/s, Vz= 4.80 m/s }
+
+
+Current OBT is = 100022
+
+Current OBT is = 100023
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.09 volts, V3.3: 2.37 volts, I5: 3.18 mA, I3.3: 4.85 mA, Temp: -2.50 degree
+					, Wind: 22.16 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 39.00 m, Y= 35.98 m, Z= 24.34 m, 
+					 Vx= 20.00 m/s, Vy= 14.16 m/s, Vz= 2.92 m/s }
+
+
+Current OBT is = 100024
+GSS Rx TM [12,12] PMONID = 0 PID 5 Check Limits value = Wind: 23.39 m/s limit = Wind: 21.99 m/s prev status Within Limits current status Above High Limit OBT = 100023
+
+GSS Rx TM [5,4] High Severity Anomaly EvID 0x4002  PID 5 = Wind: 23.39 m/s High Limit = Wind: 21.99 m/s
+
+
+Current OBT is = 100025
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 86.62 m, Y= 60.62 m, Z= 28.37 m, 
+					 Vx= 26.20 m/s, Vy= 9.27 m/s, Vz= 1.18 m/s }
+
+
+Current OBT is = 100026
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.10 volts, V3.3: 2.41 volts, I5: 3.17 mA, I3.3: 4.84 mA, Temp: -2.50 degree
+					, Wind: 24.65 m/s }
+
+
+Current OBT is = 100027
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 135.80 m, Y= 71.38 m, Z= 29.82 m, 
+					 Vx= 20.82 m/s, Vy= 1.76 m/s, Vz= 0.35 m/s }
+
+
+Current OBT is = 100028
+
+Current OBT is = 100029
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.08 volts, V3.3: 2.40 volts, I5: 3.19 mA, I3.3: 4.86 mA, Temp: -2.50 degree
+					, Wind: 25.09 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 167.95 m, Y= 72.30 m, Z= 30.20 m, 
+					 Vx= 10.82 m/s, Vy= -0.34 m/s, Vz= 0.07 m/s }
+
+
+Current OBT is = 100030
+
+Current OBT is = 100031
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 180.10 m, Y= 71.39 m, Z= 30.25 m, 
+					 Vx= 0.82 m/s, Vy= -0.44 m/s, Vz= -0.00 m/s }
+
+
+Current OBT is = 100032
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.10 volts, V3.3: 2.37 volts, I5: 3.20 mA, I3.3: 4.84 mA, Temp: -2.52 degree
+					, Wind: 25.11 m/s }
+
+
+Current OBT is = 100033
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 172.24 m, Y= 70.71 m, Z= 30.23 m, 
+					 Vx= -9.16 m/s, Vy= -0.23 m/s, Vz= -0.01 m/s }
+
+
+Current OBT is = 100034
+
+Current OBT is = 100035
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.10 volts, V3.3: 2.40 volts, I5: 3.16 mA, I3.3: 4.85 mA, Temp: -2.51 degree
+					, Wind: 25.09 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 151.85 m, Y= 70.41 m, Z= 30.21 m, 
+					 Vx= -9.10 m/s, Vy= -0.08 m/s, Vz= -0.01 m/s }
+
+
+Current OBT is = 100036
+
+Current OBT is = 100037
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 138.20 m, Y= 70.31 m, Z= 30.20 m, 
+					 Vx= -4.44 m/s, Vy= -0.02 m/s, Vz= -0.00 m/s }
+
+
+Current OBT is = 100038
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.10 volts, V3.3: 2.38 volts, I5: 3.19 mA, I3.3: 4.86 mA, Temp: -2.52 degree
+					, Wind: 25.09 m/s }
+
+
+Current OBT is = 100039
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 132.40 m, Y= 70.29 m, Z= 30.20 m, 
+					 Vx= -1.57 m/s, Vy= -0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100040
+GSS Rx TM [5,1] Informative EvID = 0x1008 : DRONE START LANDING
+
+
+Current OBT is = 100041
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.07 volts, V3.3: 2.36 volts, I5: 3.21 mA, I3.3: 4.84 mA, Temp: -2.51 degree
+					, Wind: 23.72 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 132.88 m, Y= 72.72 m, Z= 27.45 m, 
+					 Vx= 3.60 m/s, Vy= 4.08 m/s, Vz= -5.34 m/s }
+
+
+Current OBT is = 100042
+
+Current OBT is = 100043
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 141.27 m, Y= 81.51 m, Z= 14.57 m, 
+					 Vx= 3.83 m/s, Vy= 3.84 m/s, Vz= -5.99 m/s }
+
+GSS Rx TM [12,12] PMONID = 0 PID 5 Check Limits value = Wind: 17.29 m/s limit = Wind: 21.99 m/s prev status Above High Limit current status Within Limits OBT = 100042
+
+
+Current OBT is = 100044
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.10 volts, V3.3: 2.37 volts, I5: 3.18 mA, I3.3: 4.84 mA, Temp: -2.51 degree
+					, Wind: 12.30 m/s }
+
+
+Current OBT is = 100045
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 147.06 m, Y= 87.23 m, Z= 5.46 m, 
+					 Vx= 1.90 m/s, Vy= 1.85 m/s, Vz= -3.01 m/s }
+
+
+Current OBT is = 100046
+
+Current OBT is = 100047
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.08 volts, V3.3: 2.36 volts, I5: 3.21 mA, I3.3: 4.84 mA, Temp: -2.52 degree
+					, Wind: 10.37 m/s }
+
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 149.57 m, Y= 89.64 m, Z= 1.49 m, 
+					 Vx= 0.68 m/s, Vy= 0.65 m/s, Vz= -1.09 m/s }
+
+
+Current OBT is = 100048
+
+Current OBT is = 100049
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 150.36 m, Y= 90.39 m, Z= 0.22 m, 
+					 Vx= 0.18 m/s, Vy= 0.16 m/s, Vz= -0.28 m/s }
+
+
+Current OBT is = 100050
+GSS Rx TM [5,1] Informative EvID = 0x1005 : DRONE LANDED
+
+GSS Rx TM [3,25] SID 0 Param Values:  { V5: 1.09 volts, V3.3: 2.41 volts, I5: 3.20 mA, I3.3: 4.88 mA, Temp: -2.50 degree
+					, Wind: 10.00 m/s }
+
+
+Current OBT is = 100051
+GSS Rx TM [3,25] SID 10 Param Values:  { X= 0.00 m, Y= 0.00 m, Z= 0.00 m, 
+					 Vx= 0.00 m/s, Vy= 0.00 m/s, Vz= 0.00 m/s }
+
+
+Current OBT is = 100052

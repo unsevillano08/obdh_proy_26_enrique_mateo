@@ -1,0 +1,36 @@
+
+Current OBT is = 100000
+GSS Rx TM [5,1] Informative EvID = 0x1001 : START_UP 
+
+GSS Rx TM [5,1] Informative EvID = 0x1004 : DRONE SELF TEST DONE
+
+
+Current OBT is = 100001
+
+Current OBT is = 100002
+
+Current OBT is = 100003
+
+Current OBT is = 100004
+
+Current OBT is = 100005
+
+Current OBT is = 100006
+
+Current OBT is = 100007
+
+Current OBT is = 100008
+
+Current OBT is = 100009
+
+Current OBT is = 100010
+
+Current OBT is = 100011
+
+Current OBT is = 100012
+
+GSS Tx TC[17,3] FT_UAH_ASW_SERV_1_0030 step 0, Rejected TC
+GSS Rx TM [1,2]: SUBTYPE NOT VALID
+
+Current OBT is = 100013
+
