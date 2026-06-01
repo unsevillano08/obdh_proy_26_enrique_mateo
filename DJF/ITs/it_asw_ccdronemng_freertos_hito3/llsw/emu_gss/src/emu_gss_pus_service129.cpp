@@ -1,5 +1,5 @@
 /*
- * emu_sc_pus_service3.cpp
+ * emu_sc_pus_service129.cpp
  *
  *  Created on: Jan 13, 2017
  *      Author: user
@@ -38,6 +38,28 @@ void EmuGSS_TCProgram129_1::BuildTCAppData(tc_mem_descriptor_t &tc_descriptor){
 
 
 //TODO 18 Part 2 Complete EmuGSS_TCProgram129_2 methods definition
+
+EmuGSS_TCProgram129_2::EmuGSS_TCProgram129_2(uint32_t uniTime2YK,
+             const char * brief,
+			 float p1, float p2, float p3)
+    		:EmuGSS_TCProgram(uniTime2YK,129,2,
+    				TC_129_2_APPDATA_LENGTH,brief)
+{
+	P1 = p1;
+	P2 = p2;
+	P3 = p3;
+	NewProgram(this);
+
+}
+
+
+
+void EmuGSS_TCProgram129_2::BuildTCAppData(tc_mem_descriptor_t &tc_descriptor){
+
+	    SetNextFloat(P1);
+	    SetNextFloat(P2);
+	    SetNextFloat(P3);
+}
 
 
 EmuGSS_TCProgram129_3::EmuGSS_TCProgram129_3(uint32_t uniTime2YK,

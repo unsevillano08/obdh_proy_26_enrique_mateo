@@ -24,10 +24,16 @@ public:
 
 
 class EmuGSS_TCProgram129_2:public EmuGSS_TCProgram{
+	float P1;
+	float P2;
+	float P3;
 
-	//TODO 18 Part 1 Complete EmuGSS_TCProgram129_2 class declaration
+	virtual void BuildTCAppData(tc_mem_descriptor_t &tc_descriptor);
 
+public:
 
+	EmuGSS_TCProgram129_2(uint32_t uniTime2YK,
+                 const char * brief,float P1,float P2, float P3);
 };
 
 

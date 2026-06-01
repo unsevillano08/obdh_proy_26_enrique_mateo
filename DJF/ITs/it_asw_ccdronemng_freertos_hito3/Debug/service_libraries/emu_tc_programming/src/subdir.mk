@@ -4,16 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.cpp \
-../service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1010_abort_flight.cpp 
+../service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.cpp 
 
 CPP_DEPS += \
-./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.d \
-./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1010_abort_flight.d 
+./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.d 
 
 OBJS += \
-./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.o \
-./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1010_abort_flight.o 
+./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -28,7 +25,7 @@ service_libraries/emu_tc_programming/src/%.o: ../service_libraries/emu_tc_progra
 clean: clean-service_libraries-2f-emu_tc_programming-2f-src
 
 clean-service_libraries-2f-emu_tc_programming-2f-src:
-	-$(RM) ./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.d ./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.o ./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1010_abort_flight.d ./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1010_abort_flight.o
+	-$(RM) ./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.d ./service_libraries/emu_tc_programming/src/emu_tc_programming_st129_it_1000_exec_plan.o
 
 .PHONY: clean-service_libraries-2f-emu_tc_programming-2f-src
 

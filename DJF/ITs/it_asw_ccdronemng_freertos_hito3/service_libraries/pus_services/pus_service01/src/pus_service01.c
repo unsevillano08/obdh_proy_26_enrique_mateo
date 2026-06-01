@@ -84,6 +84,7 @@ tc_accept_report_t pus_service1_tc_acceptation(tc_handler_t *ptc_handler) {
 
 			case (3):
 				switch (subtype) {
+		//		case (1):
 				case (5):
 				case (6):
 				case (31):
