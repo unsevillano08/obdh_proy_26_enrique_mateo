@@ -5,8 +5,8 @@
 0
 0
 [Modificado]
-1
-1
+0
+0
 0
 [Estructura]
 [Version Estructura]
@@ -100,7 +100,7 @@ I
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-73 73 55 55
+100 97 55 55
 [FinObjetoGrafico]
 SelfTest
 ;
@@ -113,7 +113,7 @@ FDroneSelfTest();
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-196 139 144 69
+304 103 144 69
 [FinObjetoGrafico]
 FlightPlan
 ;
@@ -139,7 +139,7 @@ Ready
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-117 262 176 82
+264 242 163 94
 [FinObjetoGrafico]
 [PuntosEleccion]
 2
@@ -150,14 +150,14 @@ ExecTC
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-222 408 35 35
+328 400 35 35
 [FinObjetoGrafico]
 CtrlAlgorithm
 0
 [ObjetoGrafico]
 [Version Objeto Grafico]
 0
-549 298 35 35
+549 285 35 35
 [FinObjetoGrafico]
 ExecTC
 0
@@ -170,9 +170,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -180,7 +180,7 @@ FInitFlightPlan();
 [GraficoRama]
 [Version GraficoRama]
 0
-231 441 252 529 0
+337 433 252 529 2
 [FinGraficoRama]
 WaitFP
 true
@@ -197,7 +197,7 @@ DSubEst
 [GraficoRama]
 [Version GraficoRama]
 0
-222 425 144 344 3
+328 417 289 336 3
 [FinGraficoRama]
 CtrlAlgorithm
 0
@@ -220,7 +220,7 @@ FProgNextCtrl();
 [GraficoRama]
 [Version GraficoRama]
 0
-566 332 633 557 0
+566 319 633 557 0
 [FinGraficoRama]
 PlanDone
 GFlightPlanDone()
@@ -237,7 +237,7 @@ FToReady();
 [GraficoRama]
 [Version GraficoRama]
 0
-554 301 293 302 2
+554 288 427 287 3
 [FinGraficoRama]
 [Transiciones]
 5
@@ -264,7 +264,7 @@ true
 [GraficoTransicion]
 [Version GraficoTransicion]
 0
-124 109 196 168 0
+151 133 304 132 1
 [FinGraficoTransicion]
 ToReady
 SelfTest
@@ -287,7 +287,7 @@ FReplyDroneReady();
 [GraficoTransicion]
 [Version GraficoTransicion]
 0
-240 208 208 262 2
+348 172 348 242 2
 [FinGraficoTransicion]
 ExecTC
 Ready
@@ -310,7 +310,7 @@ FExecDroneTC();
 [GraficoTransicion]
 [Version GraficoTransicion]
 0
-238 344 239 408 0
+376 336 345 400 2
 [FinGraficoTransicion]
 CtrlAlgorithm
 FlightPlan
@@ -333,7 +333,7 @@ true
 [GraficoTransicion]
 [Version GraficoTransicion]
 0
-553 529 553 328 1
+553 529 553 315 1
 [FinGraficoTransicion]
 ExecTcInFlight
 FlightPlan
@@ -343,7 +343,7 @@ DSubEst
 ;
 [Trigger]
 DroneMngCtrl
-SDroneSetUp
+SDroneTC
 true
  
  
@@ -351,7 +351,7 @@ true
 FExecDroneTC();
 ;
 ;
-1
+0
 ;
 [GraficoTransicion]
 [Version GraficoTransicion]

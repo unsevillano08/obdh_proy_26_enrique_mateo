@@ -284,9 +284,9 @@ GFwdToHK_FDIR()
 Ready
 DSubEst
 ;
-
  
-
+ 
+ 
 ;
 FFwdHK_FDIRTC();
 ;
@@ -301,9 +301,9 @@ GFwdBKGTC()
 Ready
 DSubEst
 ;
-
  
-
+ 
+ 
 ;
 FFwdBKGTC();
 ;
@@ -318,9 +318,9 @@ GFwdDroneTC()
 Ready
 DSubEst
 ;
-
  
-
+ 
+ 
 ;
 FFwdDroneTC();
 ;
